@@ -80,5 +80,10 @@ void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-char			*ft_alphasort(char *s);
+char			*ft_asciisort(char *s);
+size_t			ft_strfind(char const *s, int c);
+void			ft_strreverse(char	*s);
+size_t			ft_wordcount(char const *str);
+int				ft_polindrome(const char *str);
+
 #endif
