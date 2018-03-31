@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_asciisort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amatsuk <matsuknastya@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/20 17:46:07 by amatsuk           #+#    #+#             */
-/*   Updated: 2017/06/20 17:46:08 by amatsuk          ###   ########.fr       */
+/*   Created: 2017/06/27 15:39:51 by amatsuk           #+#    #+#             */
+/*   Updated: 2017/06/27 15:39:53 by amatsuk          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-void	ft_putstr_fd(char const *s, int fd)
+char			*ft_asciisort(char *s)
 {
 	size_t	i;
+	size_t	j;
+	char	tmp;
 
-	i = 0;
-	if (s)
+	if (!s)
+		return (NULL);
+	if (ft_strlen(s) == 0)
+		return (s);
+	i = -1;
+	j = -1;
+	while (++i < ft_strlen(s) - 1)
 	{
-		while (i < ft_strlen(s))
+		j = -1;
+		while (++j < ft_strlen(s) - i - 1)
 		{
-			ft_putchar_fd(*(s + i), fd);
-			i++;
+			if (*(s + j) > *(s + j + 1))
+			{
+				tmp = *(s + j);
+				*(s + j) = *(s + j + 1);
+				*(s + j + 1) = tmp;
+			}
 		}
 	}
+	return (s);
 }

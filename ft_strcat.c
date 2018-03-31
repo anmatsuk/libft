@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+#include <string.h>
 
 char	*ft_strcat(char *s1, const char *s2)
 {

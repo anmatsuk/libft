@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-size_t		count_words(char const *str, char c)
+static	size_t		count_wordsc(char const *str, char c)
 {
 	size_t	count;
 	int		f;
@@ -36,14 +36,14 @@ size_t		count_words(char const *str, char c)
 	return (count);
 }
 
-size_t		get_next_word_pos(const char *str, size_t pos, char c)
+static	size_t		get_next_word_pos(const char *str, size_t pos, char c)
 {
 	while (str[pos] == c && str[pos] != '\0')
 		pos++;
 	return (pos);
 }
 
-size_t		get_word_length(const char *str, size_t pos, char c)
+static	size_t		get_word_length(const char *str, size_t pos, char c)
 {
 	size_t length;
 
@@ -53,7 +53,7 @@ size_t		get_word_length(const char *str, size_t pos, char c)
 	return (length);
 }
 
-char		*set_word(const char *str, size_t *pos, char c)
+static	char		*set_word(const char *str, size_t *pos, char c)
 {
 	size_t	l;
 	size_t	p;
@@ -76,7 +76,7 @@ char		*set_word(const char *str, size_t *pos, char c)
 	return (res);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char				**ft_strsplit(char const *s, char c)
 {
 	char	**res;
 	size_t	p;
@@ -87,7 +87,7 @@ char		**ft_strsplit(char const *s, char c)
 	p = 0;
 	if (!s)
 		return (NULL);
-	words = count_words(s, c);
+	words = count_wordsc(s, c);
 	res = (char **)malloc(sizeof(char*) * (words + 1));
 	if (res == NULL)
 		return (NULL);

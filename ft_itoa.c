@@ -13,7 +13,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int		get_size(unsigned int n, int size)
+static	int		get_size(unsigned int n, int size)
 {
 	if (n == 0)
 		return (size);
@@ -22,7 +22,7 @@ int		get_size(unsigned int n, int size)
 	return (get_size(n, size));
 }
 
-void	create_str(char *str, int size, int flag, unsigned int n)
+static	void	create_str(char *str, int size, int flag, unsigned int n)
 {
 	int		i;
 
@@ -40,7 +40,7 @@ void	create_str(char *str, int size, int flag, unsigned int n)
 	}
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	unsigned int	res;
 	int				flag;

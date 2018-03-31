@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char	*join(char const *s1, char const *s2, char *res)
+static	char	*join(char const *s1, char const *s2, char *res)
 {
 	int i;
 
@@ -39,7 +39,7 @@ char	*join(char const *s1, char const *s2, char *res)
 	return (res);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char			*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	len;
 	char	*res;

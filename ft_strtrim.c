@@ -13,14 +13,14 @@
 #include "libft.h"
 #include <string.h>
 
-int		is_space_tab(char c)
+static	int		is_space_tab(char c)
 {
 	if (c == ' ' || c == '\n' || c == '\t')
 		return (1);
 	return (0);
 }
 
-size_t	get_len(char const *s, size_t *start)
+static	size_t	get_len(char const *s, size_t *start)
 {
 	size_t		len;
 	size_t		i;
@@ -46,7 +46,7 @@ size_t	get_len(char const *s, size_t *start)
 	return (len - i);
 }
 
-char	*ft_strtrim(char const *s)
+char			*ft_strtrim(char const *s)
 {
 	size_t		new_len;
 	char		*new;

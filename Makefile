@@ -84,7 +84,7 @@ HDR = libft.h
 all: $(NAME)
 
 $(NAME):
-	@gcc -Wall -Wextra -Werror -c $(FILES) $(HDR)
+	@gcc -Wall -Wextra -Werror -c $(FILES)
 	@ar rc $(NAME) $(OBJECTS)
 	@ranlib $(NAME)
 

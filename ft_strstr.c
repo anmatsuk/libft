@@ -12,9 +12,8 @@
 
 #include "libft.h"
 #include <string.h>
-#include <stdio.h>
 
-char	*ft_substr(const char *b, const char *little)
+static	char	*ft_substr(const char *b, const char *little)
 {
 	int	j;
 	int	flag;
@@ -42,7 +41,7 @@ char	*ft_substr(const char *b, const char *little)
 	return (NULL);
 }
 
-char	*ft_strstr(const char *big, const char *little)
+char			*ft_strstr(const char *big, const char *little)
 {
 	char		*res;
 	int			i;
