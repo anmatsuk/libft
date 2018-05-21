@@ -1,17 +1,17 @@
-##libft  
+## libft  
 This is the first 42 project. The task is to recreate various standard C library functions, as well as extra things which might be useful, like linked lists for example.
 
 subject at [libft](https://github.com/anmatsuk/libft/blob/master/libft.en.pdf)
 
-** Compile: **
+**Compile:**
 You may compile libft.a by running make.
 
-** Usage: **
+**Usage:**
 Include it in your C project:
 
 `include "libft.h"`
 
-###libc functions:
+### libc functions:
 memset   
 bzero  
 memcpy  
@@ -40,7 +40,7 @@ isprint
 toupper  
 tolower
 
-###suplementary functions:
+### suplementary functions:
 memalloc  
 memdel  
 strnew  
@@ -66,7 +66,7 @@ putstr-fd
 putendl-fd  
 putnbr-fd
 
-###bonus:
+### bonus:
 lstnew  
 lstdelone  
 lstdel  
